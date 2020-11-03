@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    line-height: 200px;
+    margin: 100px auto;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(30deg);
+
+  }
+
+  .up,
+  .down,
+  .left,
+  .right,
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  .up {
+    background-color: green;
+    transform: rotateY(90deg) translateZ(100px);
+  }
+
+  .down {
+    background-color: orange;
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+
+  .left {
+    background-color: red;
+    transform: translateZ(100PX);
+  }
+
+  .right {
+    background-color: yellow;
+    transform: translateZ(-100px);
+  }
+
+  .front {
+    background-color: lime;
+    transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .back {
+    background-color: blue;
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="up">up</div>
+    <div class="down">down</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="front">front</div>
+    <div class="back">back</div>
+  </div>
+</body>
+
+</html>
