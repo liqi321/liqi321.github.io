@@ -16,18 +16,22 @@
     line-height: 200px;
     margin: 100px auto;
     position: relative;
-    perspective: 1000px;
     transform-style: preserve-3d;
     transform: rotateX(-30deg) rotateY(30deg);
-
+    animation: rotate 20s linear infinite;
   }
 
-  .up,
-  .down,
-  .left,
-  .right,
-  .front,
-  .back {
+  @keyframes rotate {
+    from {
+      transform: rotatex(0) rotatey(0);
+    }
+
+    to {
+      transform: rotatex(360deg) rotatey(3600deg)
+    }
+  }
+
+  div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -68,14 +72,14 @@
 </style>
 
 <body>
-  <div class="box">
+  <section class="box">
     <div class="up">up</div>
     <div class="down">down</div>
     <div class="left">left</div>
     <div class="right">right</div>
     <div class="front">front</div>
     <div class="back">back</div>
-  </div>
+  </section>
 </body>
 
 </html>
