@@ -6,6 +6,7 @@ var liqi321 = {
         result.push(ary[i])
       }
     }
+    return result
   },
 
 }
