@@ -51,6 +51,14 @@ var liqi321 = {
     return result
   },
 
+  dropRight: function dropright(ary, n = 1) {
+    var result = []
+    for (i = 0; i < ary.length - n; i++) {
+      result.push(ary[i])
+    }
+    return result
+  },
+
 
   indexOf: function indexof(ary, val, startIndex = 0) {
     for (var i = startIndex; i < ary.length; i++) {
@@ -61,7 +69,7 @@ var liqi321 = {
     return -1
   },
 
-  lastindexOf: function lastindexof(ary, val, startIndex = ary.length - 1) {
+  lastIndexOf: function lastindexof(ary, val, startIndex = ary.length - 1) {
     for (var i = startIndex; i >= 0; i--) {
       if (ary[i] == val) {
         return i
