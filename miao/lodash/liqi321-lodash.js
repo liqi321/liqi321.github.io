@@ -1,5 +1,5 @@
 var liqi321 = {
-  chunk: function chunk(ary, size) {
+  chunk: function chunk(ary, size = 1) {
     var result = []
     var ress = []
     var l = 0
@@ -31,7 +31,7 @@ var liqi321 = {
     return result
   },
 
-  indexof: function indexof(ary, val, startIndex = 0) {
+  indexOf: function indexof(ary, val, startIndex = 0) {
     for (var i = startIndex; i < ary.length; i++) {
       if (ary[i] == val) {
         return i
@@ -40,7 +40,7 @@ var liqi321 = {
     return -1
   },
 
-  lastindexof: function lastindexof(ary, val, startIndex = ary.length - 1) {
+  lastindexOf: function lastindexof(ary, val, startIndex = ary.length - 1) {
     for (var i = startIndex; i >= 0; i--) {
       if (ary[i] == val) {
         return i
