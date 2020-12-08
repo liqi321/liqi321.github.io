@@ -33,11 +33,24 @@ var liqi321 = {
 
   join: function join(ary, sep = ' ') {
     var result = ''
-    for (i = 1; i < ary.length - 1; i++) {
+    for (i = 0; i < ary.length - 1; i++) {
       result += ary[i] + '' + sep
     }
     return result += ary[i]
   },
+
+  last: function last(ary) {
+    return ary[ary.length - 1]
+  },
+
+  drop: function drop(ary, n = 1) {
+    var result = []
+    for (i = n; i < ary.length; i++) {
+      result.push(ary[i])
+    }
+    return result
+  },
+
 
   indexOf: function indexof(ary, val, startIndex = 0) {
     for (var i = startIndex; i < ary.length; i++) {
