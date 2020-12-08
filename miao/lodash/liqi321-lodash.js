@@ -1,24 +1,24 @@
 var liqi321 = {
   chunk: function chunk(ary, size = 1) {
     var result = []
-    var ress = []
+    var arr = []
     var l = 0
     if (size < 1) {
       size = 1
     }
     for (i = 0; i < ary.length; i++) {
-      ress.push(ary[i])
+      arr.push(ary[i])
       l++
       if (l == size) {
-        result.push(ress)
-        ress = []
+        result.push(arr)
+        arr = []
         l = 0
       }
-      if (l != 0) {
-        result.push(ress)
-      }
-      return result
     }
+    if (l != 0) {
+      result.push(arr)
+    }
+    return result
   },
 
   compact: function compact(ary) {
@@ -29,6 +29,14 @@ var liqi321 = {
       }
     }
     return result
+  },
+
+  join: function join(ary, sep = ' ') {
+    var result = ''
+    for (i = 1; i < ary.length - 1; i++) {
+      result += ary[i] + '' + sep
+    }
+    return result += ary[i]
   },
 
   indexOf: function indexof(ary, val, startIndex = 0) {
